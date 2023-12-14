@@ -1,0 +1,20 @@
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+
+    RootBundle\:
+        resource: '../src'
+        exclude:
+            - '../src/{DependencyInjection,Entity,Repository/Repository.php}'
+            
+    RootBundle\Controller\:
+        resource: '../src/Controller/'
+        tags: ['controller.service_arguments']
+    
+    RootBundle\ApiPlatform\DeserializeListener:
+        decorates: 'api_platform.listener.request.deserialize'
+        autoconfigure: false
+        tags:
+            - {name: 'kernel.event_listener', event: 'kernel.request', method: 'onKernelRequest', priority: 2}
+        

@@ -1,0 +1,57 @@
+{% set PAGE_TITLE = PAGE_TITLE|default('Lahotte') %}
+{% set PAGE_KEYWORDS = PAGE_TITLE|default('') %}
+{% set PAGE_ALLOW_ROBOTS = PAGE_ALLOW_ROBOTS|default(true) %}
+{% set PAGE_DESCRIPTION = PAGE_DESCRIPTION|default("Lahotte à votre service") %}
+{% set PAGE_IMAGE = PAGE_IMAGE|default(url('home')~'/favicons/favicon-152x152.png') %}
+{% set PAGE_URL = PAGE_URL|default(app.request.uri) %}
+
+{% set PAGE_OG_TYPE = PAGE_OG_TYPE|default('website') %}
+{% set PAGE_OG_URL = PAGE_OG_URL|default(PAGE_URL) %}
+{% set PAGE_OG_DESCRIPTION = PAGE_OG_DESCRIPTION|default(PAGE_DESCRIPTION) %}
+{% set PAGE_OG_IMAGE = PAGE_OG_IMAGE|default(PAGE_IMAGE) %}
+
+{% set PAGE_TWITTER_TITLE = PAGE_TWITTER_TITLE|default(PAGE_TITLE) %}
+{% set PAGE_TWITTER_DESCRIPTION = PAGE_TWITTER_DESCRIPTION|default(PAGE_DESCRIPTION) %}
+{% set PAGE_TWITTER_IMAGE = PAGE_TWITTER_IMAGE|default(PAGE_IMAGE) %}
+
+{% set FB_APP_ID = FB_APP_ID|default('') %}
+
+{% set APP_INSTALLABLE = APP_INSTALLABLE|default(false) %}
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="description" content="{{ PAGE_DESCRIPTION }}"/>
+<meta name="keywords" content="Lahotte, {{PAGE_KEYWORDS}}"/>
+<meta name="author" content="Lahotte"/>
+<meta name="copyright" content="Lahotte"/>
+<meta name="robots" content="{{PAGE_ALLOW_ROBOTS ? 'index, follow' : 'noindex, nofollow'}}">
+<meta property="fb:app_id" content="{{FB_APP_ID}}">
+{% include "@Root/_organization-description-script.html.twig" %} 
+
+<meta property="og:type" content="{{ PAGE_OG_TYPE }}">
+<meta property="og:url" content="{{ PAGE_OG_URL }}">
+<meta property="og:description" content="{{ PAGE_OG_DESCRIPTION }}">
+<meta property="og:image" content="{{ PAGE_OG_IMAGE }}">
+
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="{{ PAGE_TWITTER_IMAGE }}">
+<meta name="twitter:title" content="{{ PAGE_TWITTER_TITLE }}">
+<meta name="twitter:description" content="{{ PAGE_TWITTER_DESCRIPTION }}">
+
+{% if APP_INSTALLABLE %}
+    <link name="mobile-web-app-capable" content="yes"/>
+    <link name="apple-mobile-web-app-capable" content="yes"/>
+    <link name="apple-mobile-web-app-status-bar-style" content="black"/>
+    <link name="apple-mobile-web-app-title" content="{{APP_NAME}}"/>
+    <link name="msapplication-TileColor" href="/favicons/favicon-152x152.png" color="#ffffff"/>
+    <meta name="msapplication-config" content="/favicons/browserconfig.xml"/>
+    <link rel="manifest" href="/manifest.json"/>
+    <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#ff6532"/>
+{% endif %}
+<link name="theme-color" color="#ffffff"/>
+<link rel="apple-touch-icon" sizes="152x152" href="/favicons/favicon-152x152.png"/>
+<link rel="icon" sizes="32x32" href="/favicons/favicon-32x32.png"/>
+<link rel="icon" sizes="48x48" href="/favicons/favicon-48x48.png"/>
+<link rel="icon" sizes="144x144" href="/favicons/favicon-144x144.png"/>
+<link rel="icon" href="/favicons/favicon-512x512.png"/>
+<title>{{ PAGE_TITLE }}</title>

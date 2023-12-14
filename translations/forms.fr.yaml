@@ -1,0 +1,90 @@
+# Général
+Last name: Nom
+Last Name: Nom
+First name: Prénom
+First Name: Prénom
+Name: Nom
+Birth date: Date de naissance
+Birth Date: Date de naissance
+Password: Mot de passe
+Confirm password: Confirmer le mot de passe
+User name: Nom d'utilisateur
+User Name: Nom d'utilisateur
+UserName: Nom d'utilisateur
+Phone number: Numéro de téléphone
+Phone Number: Numéro de téléphone
+PhoneNumber: Numéro de téléphone
+Created at: Créé le
+Created At: Créé le
+Updated at: Modifié le
+Updated At: Modifié le
+Sent at: Envoyé le
+Sent At: Envoyé le
+Seen: Vu
+Seen at: Vue le
+Seen At: Vue le
+Paid: Payé(e)
+Pait At: Payé(e) le
+Gender: Sexe
+Validated: Validé
+Number: Numéro
+Title: Titre
+Content: Contenu
+Profile Completed: Profil complété
+Moderator: Modérateur
+
+#States
+SENT: Envoyé
+ACCEPTED: Accepté
+REFUSED: Refusé
+DENIED: Refusé
+State: Etat
+State Text: Etat
+
+Comment: Commentaire
+Text: Texte
+File: Fichier
+Correction File: Fichier correction
+Files: Fichiers
+Year: Année
+Duration: Durée
+Payment Method: Méthode de paiement
+Ratings Average: Note moyenne
+
+Registrations: Enregistrements
+
+Price: Prix
+Two Weeks Price: Prix pour deux semaines
+One Month Price: Prix pour un mois
+Three Months Price: Prix pour trois mois
+Six Months Price: Prix pour six mois
+One Year Price: Prix pour un an
+Town: Ville
+Approved: Approuvé
+Taken at: Pris le
+Taken: Pris
+Location: Adresse
+Applicant name: Nom
+Applicant Name: Nom
+Applicant email: Email
+Applicant Email: Email
+Applicant phone number: Numéro de téléphone
+Applicant Phone Number: Numéro de téléphone
+Managers: Gestionnaires
+Address: Adresse
+Banner: Bannière
+Website: Site web
+
+
+#validators
+Less than or equal to: Inférieur ou égal à
+Greater than or equal to: Supérieur ou égal à
+Should be between: Doit être entre
+Should have between: Doit avoir entre
+At least: Au moins 
+At most: Au plus 
+character: caractère
+characters: caractères
+Invalid address: Adresse invalide
+Invalid format: Format non valide
+You should fill this field: Vous devez remplir ce champ
